@@ -29,9 +29,9 @@ c. Di halaman profil, kita memanfaatkan authStore untuk mengakses detail penggun
 # Konfigurasi Router dengan Perlindungan Rute
 a. Pada file index.ts di folder router, kita mendefinisikan rute aplikasi sekaligus menerapkan perlindungan pada halaman beranda dan profil agar hanya dapat diakses oleh pengguna yang telah login.  
 
-b. Untuk setiap perpindahan rute, kita memanfaatkan `beforeEach` untuk memeriksa status autentikasi pengguna. Jika pengguna belum login, mereka akan dialihkan ke halaman login.
+b. Untuk setiap perpindahan rute, kita memanfaatkan beforeEach untuk memeriksa status autentikasi pengguna. Jika pengguna belum login, mereka akan dialihkan ke halaman login.
 # Alur Autentikasi dan Mendapatkan Data Profil
-a. Saat pengguna menekan tombol "Sign In with Google" di halaman login, fungsi `loginWithGoogle` memulai proses autentikasi melalui Google.  
+a. Saat pengguna menekan tombol "Sign In with Google" di halaman login, fungsi loginWithGoogle memulai proses autentikasi melalui Google.  
 
 b. Setelah login berhasil, aplikasi mendapatkan token ID dari Google, yang kemudian dikonversi menjadi kredensial Firebase. Firebase mencatat pengguna sebagai terautentikasi dan menyimpan data seperti nama serta foto profil mereka.  
 
