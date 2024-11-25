@@ -42,3 +42,32 @@ c. Data ini disimpan di dalam authStore dan digunakan di seluruh aplikasi untuk 
 ![SS 2](ss2.jpg)
 ![SS 3](ss3.jpg)
 ![SS 4](ss4.jpg)
+
+## Lanjutan Program
+a. Konfigurasi Firestore
+
+Aplikasi Ionic terhubung dengan Firebase dan Firestore diatur dalam mode uji coba (test mode) untuk pengembangan. File firestore.ts dibuat untuk mendukung operasi CRUD pada struktur koleksi users/{uid}/todos. Fungsi yang diimplementasikan meliputi menambahkan dokumen baru ke koleksi, mengambil daftar dokumen dari koleksi pengguna, memperbarui dokumen berdasarkan ID, menghapus dokumen menggunakan ID, dan mengubah status dokumen dari aktif menjadi selesai atau sebaliknya.
+
+b. Persiapan Proyek Ionic
+
+Komponen menu TabsMenu dipindahkan ke file App.vue agar pengaturannya lebih fleksibel, sehingga menu dapat diatur untuk tidak tampil di halaman tertentu seperti halaman login. Penyesuaian tampilan dilakukan dengan menambahkan CSS khusus pada komponen Todo untuk mendukung fitur scroll, responsivitas, dan memberikan estetika yang menarik.
+
+c. Pembuatan Halaman Home
+
+Halaman HomePage.vue menjadi pusat tampilan utama aplikasi. Halaman ini dilengkapi dengan fitur refresher untuk memuat ulang data saat halaman ditarik ke bawah. Todo List pada halaman ini terbagi menjadi dua bagian, yaitu Active Todos dan Completed Todos, dengan setiap todo dilengkapi opsi seperti edit, delete, dan update status yang dapat dilakukan melalui klik atau geser (swipe). Sebuah Floating Action Button (FAB) ditambahkan untuk membuka modal input yang digunakan untuk menambahkan atau mengedit Todo, di mana data dikirim melalui fungsi handleSubmit.
+
+d. Logika Fungsi Utama
+
+Beberapa fungsi inti diterapkan untuk mendukung manajemen data. Fungsi loadTodos digunakan untuk mengambil daftar Todo dari Firestore, sedangkan handleRefresh memuat ulang data Todo. Fungsi handleSubmit bertugas menambahkan atau mengedit Todo. Aksi lain seperti mengedit, menghapus, atau mengubah status Todo diatur melalui fungsi handleEdit, handleDelete, dan handleStatus. Untuk meningkatkan pengalaman pengguna, notifikasi berupa toast ditampilkan sebagai umpan balik, seperti ketika Todo berhasil ditambahkan atau terjadi kesalahan. Waktu pembaruan terakhir Todo juga ditampilkan dalam format relatif, misalnya "2 minutes ago."
+
+## Screenshot
+![SS 5](ss5.png)
+![SS 6](ss6.png)
+![SS 7](ss7.png)
+![SS 8](ss8.png)
+![SS 9](ss9.png)
+![SS 10](ss10.png)
+![SS 11](ss11.png)
+![SS 12](ss12.png)
+![SS 13](ss13.png)
+![SS 14](ss14.png)
